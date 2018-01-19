@@ -72,6 +72,16 @@ Once the group is created and the certificates have been uploaded and verified, 
 
 When registering a device via group enrollment, the cert may need to include the certificate chain that links it back to a verified certificate.
 
+## Running the example
+The example expects the following input parameters:
+idScope: Can be found in the azure portal. Go to your Device Provisioning Service and the overview blade.
+RegistrionID: Unique Identifier for your device. The example will also use the registration ID as Device ID.
+Certificate: The example assumes that the certificate follows the same namingconvention as the [Provicioning tools][provisioning-tools].
+Protocol: Optional. Default is HTTP. Other possibilities are MQTT, MQTTWS, AMQP and AMQPWS
+
+```
+$ node <sample_file.js> --idscope <ID SCOPE> --registrationid <REGISTRATION ID> --certificate <COMMONNAME> --protocol <PROTOCOL>
+```
 
 ## Read More
 For more information on how to use this library refer to the documents below:
@@ -94,7 +104,7 @@ For more information on how to use this library refer to the documents below:
 [pem-npm]: https://www.npmjs.com/package/pem
 [provisioning-e2e]: https://github.com/azure/azure-iot-sdk-node/tree/master/provisioning/e2e
 [c-sdk-create-individual-enrollment]: https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-x509
-[lnk-dps-concepts]: https://docs.microsoft.com/en-us/azure/iot-dps/concepts-service
+[lnk-dps-concepts]: https://docs.microsoft.com/en-us/azure/iot-dps/concepts-device
 [provisioning-tools]: https://github.com/azure/azure-iot-sdk-node/tree/master/provisioning/tools
 [lnk-x509-ca-overview]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-x509ca-overview
 [lnk-x509-verification-instructions]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-security-x509-get-started#registercerts

@@ -9,7 +9,8 @@
     "azure-iot-provisioning-device-amqp": "1.0.0",
     "azure-iot-provisioning-device-http": "1.0.0",
     "azure-iot-provisioning-device-mqtt": "1.0.0",
-    "azure-iot-security-x509": "1.0.0"
+    "azure-iot-security-x509": "1.0.0",
+    "yargs": "^10.1.1"
   },
   "scripts": {
     "build": "echo nothing to do"
